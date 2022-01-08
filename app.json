@@ -1,0 +1,37 @@
+{
+    "name": "Caption Editor",
+    "description": "Edit captions of channel messages",
+    "logo": "https://te.legra.ph/file/786efbad908ac7ccd746d.jpg",
+    "keywords": [
+        "telegram",
+        "pyrogram",
+        "feedback-bot",
+        "Arun_TG"
+    ],
+    "repository": "https://github.com/Arun-TG/Caption-Editor",
+    "website": "t.me/telegram",
+    "success_url": "https://t.me/ArunSince2005",
+    "env": {
+        "API_HASH": {
+            "description": "You API HASH from my.telegram.org",
+            "value": ""
+        },
+        "API_ID": {
+            "description": "You API ID from my.telegram.org",
+            "value": ""
+        },
+        "BOT_TOKEN": {
+            "description": "Your Telegram Bot Token from @BotFather",
+            "value": ""
+        },
+        "CAPTION": {
+            "description": "Caption for messages",
+            "value": ""
+        }
+    },
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ]
+}
