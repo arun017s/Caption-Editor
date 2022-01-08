@@ -33,12 +33,18 @@ async def get_caption(name):
         newcap=name
     return newcap
 
+@bot.on_message(filters.private & filters.command("start")
+async def start(bot, message):
+    await message.reply(f"Hello {message.from_user.mention},\nI will edit channel message's captions.\nAdd me to your channel with necessary permissions.")
 
 @bot.on_message(filters.channel & filters.document) #add more filters if you want.
 async def caption(bot, message):
-    await message.edit(CAPTION.format(name=get_caption(message.document.file_name),    
-                                      size=get_size(message.document.file_size))
-                      )
+   try:
+       await message.edit(CAPTION.format(name=get_caption(message.document.file_name),    
+                                         size=get_size(message.document.file_size))
+                          )
+   except Exception as e:
+       print(e)
 
 
 bot.run()
