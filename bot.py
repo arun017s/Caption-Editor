@@ -36,8 +36,8 @@ async def get_caption(name):
 
 bot.on_message(filters.channel & filters.document) #add more filters if you want.
 async def caption(bot, message):
-    await message.edit(CAPTION.format(name=get_caption(message.document.file_name)    
-                                           size=get_size(message.document.file_size))
+    await message.edit(CAPTION.format(name=get_caption(message.document.file_name),    
+                                      size=get_size(message.document.file_size))
                       )
 
 
