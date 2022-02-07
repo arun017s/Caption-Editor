@@ -25,4 +25,4 @@ python3 bot.py
 
 ### Credits
 * [Pyrogram](https://github.com/pyrogram/pyrogram)
-* [Arun](https://github.com/Arun-TG)
+* [Arun](t.me/arun_tg)
